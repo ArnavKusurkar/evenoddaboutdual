@@ -1,0 +1,47 @@
+<html>
+<head>
+<title>Even Odd Finder</title>
+<style>
+* { background-color:#B1E5F2; font-size: 50px;}
+.nav { background-color:#B1E5F2; border-radius: 20%; font-size: 10px;}
+.nav a { color: #374b53; text-decoration:none ;  margin:10%; } 
+</style>
+<script>
+function find()
+{
+event.preventDefault();
+let num = document.getElementById("num");
+let msg = document.getElementById("msg");
+let n = parseInt(num.value);
+if (num.value=="")
+{
+alert("Please Enter Number");
+msg.innerHTML="";
+num.focus()
+return;
+}
+if (n%2 == 0)
+msg.innerHTML="Even Number";
+else
+msg.innerHTML="Odd Number";
+}
+</script>
+</head>
+
+<body>
+    <center>
+<div class="nav">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+</div>
+
+<h1>Even Odd Finder</h1>
+<form onsubmit = "find()">
+<input type="number" Id="num" placeholder="Enter the number">
+<input type = "submit" value="Submit">
+</form> 
+<h2 id="msg"></h2>
+</center>
+</body>
+
+</html>
